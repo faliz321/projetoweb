@@ -1,0 +1,242 @@
+/* Variáveis de configuração */
+:root{
+  --primary: #2196F3;
+  --secondary: #1976D2;
+  --default: #90CAF9;
+  --detalhe: #2196F3;
+}
+
+*{
+  color: var(--default);
+  font-family: Arial;
+  box-sizing: border-box;
+  list-style: none;
+  padding: 0;
+}
+
+/* Corpo */
+body{
+  width: 80%;
+  margin-left: 10%;
+}
+
+/* Cabeçalho */
+header {
+  padding: 10px;
+  font-size: 30px;
+  border-bottom: 3px solid var(--primary);
+  background-color: var(--secondary);
+}
+
+/* Navegação da Página */
+nav{
+  background-color: var(--primary);
+}
+
+  nav > ul{
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+  }
+
+    nav > ul > li {
+      margin-right: 10px;
+      padding: 5px 10px;
+      color: #fff;
+    }
+
+      nav > ul > li > a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+/* Elemento que receberá o conteúdo */
+main{
+
+}
+
+  /* Título das páginas */
+  h1 {
+      display: inline-flex;
+      align-items: center;
+  }
+
+    h1 > a {
+      background-image: url(../images/voltar.png);
+      background-repeat: no-repeat;
+      width: 50px;
+      height: 50px;
+    }
+
+/* Elemento que exibe um "carregando" na página */
+.loading{
+  margin-left: 35%;
+  width: 30%;
+  padding: 20px;
+  background-color: var(--detalhe);
+  color:#fff;
+  text-align: center;
+  margin-top: 30%;
+}
+
+  /* Busca */
+  section#search {
+    height: 50px;
+    border-bottom: 3px solid var(--secondary);
+    display: inline-flex;
+    width: 100%;
+    padding-bottom: 60px;
+    margin-bottom: 10px;
+  }
+      section#search > input {
+        height: 40px;
+        width: calc( 100% - 75px);
+        font-size: 20px;
+        padding: 20px;
+        border: 1px solid var(--detalhe);
+        background-image: url(../images/lupa.png);
+        background-repeat: no-repeat;
+        background-position-x: 99%;
+        background-size: contain;
+        margin-right: 10px;
+      }
+
+        section#search > a {
+          background-image: url(../images/mais.png);
+          width: 50px;
+          height: 45px;
+          background-repeat: no-repeat;
+          align-items: center;
+          background-size: contain;
+        }
+
+  /* Exibe os resultados */
+  #acervo-results > li {
+    border-bottom: 3px solid var(--secondary);
+    padding: 10px;
+  }
+
+    #acervo-results > li:hover {
+      background-color: var(--secondary)
+    }
+
+    .lines {
+      width: calc( 100% - 60px );
+      display: inline-block;
+    }
+
+    .line1, .line2 {
+      display: inline-flex;
+      width: calc(100% - 25px );
+    }
+      .titulo, .autor {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .autor {
+        font-weight: bold;
+        background-image: url(../images/autor.png);
+        background-repeat: no-repeat;
+        padding-left: 35px;
+        padding-top: 2px;
+        background-size: contain;
+      }
+
+      .titulo {
+        margin-right: 10px;
+        font-weight: bold;
+        background-image: url(../images/livro.png);
+        background-repeat: no-repeat;
+        padding-left: 35px;
+        padding-top: 2px;
+        background-size: contain;
+        font-size:24px;
+        font-variant: small-caps;
+      }
+
+
+    .line2 > .preco {
+      background-image: url(../images/preco.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 100px;
+      height: 22px;
+      padding-left: 25px;
+      margin-left: 20px;
+      padding-top: 2px;
+    }
+
+      .line2 .editora > a {
+        color: var(--primary);
+        text-decoration: underline;
+      }
+
+      .line2 .editora > a:hover {
+        text-decoration: none;
+      }
+
+      .line2 > .quantidade {
+        background-color: var(--primary);
+        padding: 2px 10px;
+        color: #fff;
+      }
+
+  .edit {
+    display: inline-flex;
+    width: 55px;
+    height: 50px;
+  }
+
+    .edit > a {
+      background-repeat: no-repeat;
+      background-image: url(../images/editar.png);
+      height: 45px;
+      width: 45px;
+      background-size: contain;
+      background-position-x: right;
+      text-align: right;
+  }
+
+
+/*
+  FORMULÁRIOS
+*/
+
+form > label {
+  width: 33%;
+  height: 70px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+form > label > input, form > label > select{
+  width: 100%;
+  margin-right: 10px;
+  height: 35px;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+form > button{
+  width: 33%;
+  margin-right: 10px;
+  height: 35px;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  background-color: var(--primary);
+  color: #fff;
+  border:0;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th{
+  border: 1px solid var(--detalhe);
+  padding: 5px;
+}
